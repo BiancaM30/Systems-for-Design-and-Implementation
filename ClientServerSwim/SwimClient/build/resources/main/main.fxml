@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="503.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="swim.client.gui.MainController">
+   <children>
+      <TabPane layoutX="1.0" layoutY="32.0" prefHeight="457.0" prefWidth="592.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="SwimmingEvents">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="416.0" prefWidth="592.0">
+                     <children>
+                        <TableView fx:id="tableViewEventsTab1" layoutX="80.0" layoutY="120.0" prefHeight="293.0" prefWidth="431.0">
+                           <columns>
+                              <TableColumn fx:id="tableColumnDistanceTab1" prefWidth="145.0" text="Distance" />
+                              <TableColumn fx:id="tableColumnStyleTab1" prefWidth="145.0" text="Style" />
+                              <TableColumn fx:id="tableColumnNumberTab1" prefWidth="139.33331298828125" text="Number of contestants" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="168.0" layoutY="45.0" text="All available swimming events">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Search">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="208.0" layoutY="7.0" text="Search by contest">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="34.0" text="1. Select swim event:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tableViewEventsTab2" layoutX="14.0" layoutY="60.0" onMouseClicked="#onSelectionRow" prefHeight="119.0" prefWidth="330.0">
+                           <columns>
+                              <TableColumn fx:id="tableColumnDistanceTab2" prefWidth="155.99996948242188" text="Distance" />
+                              <TableColumn fx:id="tableColumnStyleTab2" prefWidth="173.3333740234375" text="Style" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="14.0" layoutY="204.0" text="2. Display all registered contestants">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tableViewContestantsTab2" layoutX="14.0" layoutY="230.0" prefHeight="184.0" prefWidth="531.0">
+                           <columns>
+                              <TableColumn fx:id="tableColumnIdTab2" prefWidth="55.33331298828125" text="Id" />
+                              <TableColumn fx:id="tableColumnNameTab2" prefWidth="144.66665649414062" text="Name" />
+                              <TableColumn fx:id="tableColumnAgeTab2" prefWidth="69.99998474121094" text="Age" />
+                              <TableColumn fx:id="tableColumnRegistrationsTab2" prefWidth="268.6666564941406" text="All contestant registrations" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab text="Registration">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableViewContestantsTab3" layoutX="48.0" layoutY="57.0" prefHeight="165.0" prefWidth="331.0">
+                           <columns>
+                              <TableColumn fx:id="tableColumnIdTab3" prefWidth="55.33331298828125" text="Id" />
+                              <TableColumn fx:id="tableColumnNameTab3" prefWidth="144.66665649414062" text="Name" />
+                              <TableColumn fx:id="tableColumnAgeTab3" prefWidth="130.00002034505206" text="Age" />
+                           </columns>
+                        </TableView>
+                        <TableView fx:id="tableViewEventsTab3" layoutX="48.0" layoutY="268.0" prefHeight="165.0" prefWidth="331.0">
+                           <columns>
+                              <TableColumn fx:id="tableColumnDistanceTab3" prefWidth="155.99996948242188" text="Distance" />
+                              <TableColumn fx:id="tableColumnStyleTab3" prefWidth="173.3333740234375" text="Style" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="55.0" layoutY="14.0" text="1. Select contestant">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="50.0" layoutY="238.0" text="2. Select swim event:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="462.0" layoutY="351.0" mnemonicParsing="false" onAction="#clickOnRegister" text="Register" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button layoutX="522.0" layoutY="6.0" mnemonicParsing="false" onAction="#clickOnLogout" text="Logout" textFill="#e60000" />
+   </children>
+</AnchorPane>

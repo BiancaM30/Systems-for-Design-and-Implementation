@@ -1,0 +1,8 @@
+rootProject.name = 'ClientServerSwim'
+include 'SwimClient'
+include 'SwimModel'
+include 'SwimPersistance'
+include 'SwimServices'
+include 'SwimNetworking'
+include 'SwimServer'
+

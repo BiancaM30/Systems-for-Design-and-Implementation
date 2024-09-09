@@ -1,0 +1,18 @@
+.root{
+
+
+    -fx-background-image: url("/images/water.jpg");
+
+}
+
+.LoginButton
+{
+    -fx-background-color: #61a7d5;
+}
+
+.LoginButton:hover
+{
+    -fx-text-fill: #cdcdec;
+}
+
+

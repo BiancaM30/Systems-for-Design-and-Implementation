@@ -1,0 +1,25 @@
+#anchorLeft{
+    -fx-background-color: #5bb0c7;
+
+}
+
+#anchorRight{
+
+    -fx-background-color: #f8f3ee;
+    -fx-background-image: url("/images/water.jpg");
+}
+
+.button{
+    -fx-pref-width: 175;
+    -fx-pref-height: 35;
+    -fx-background-color: #5bb0c7;
+    /*-fx-background-color: #61a7d5;*/
+    -fx-text-fill: #f8f3ee;
+    -fx-font-size: 14;
+}
+
+.button:hover
+{
+    -fx-text-fill: #cdcdec;
+}
+

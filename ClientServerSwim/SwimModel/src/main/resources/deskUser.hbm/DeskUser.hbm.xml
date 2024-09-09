@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="swim.model.hbm.DeskUser" table="DESK_USERS">
+        <id name="ID" column="USER_ID">
+            <generator class="increment"/>
+        </id>
+        <property name="email" column="USER_EMAIL"/>
+        <property name="password" column="USER_PASSWORD"/>
+    </class>
+
+</hibernate-mapping>
